@@ -72,12 +72,12 @@ public class AutoMsg extends Module {
             return;
         }
 
-        String self = mc.player.getGameProfile().getName();
+        String self = mc.player.getGameProfile().name();
         Set<String> skip = new HashSet<>();
         for (String s : ignored.get()) skip.add(s.toLowerCase(Locale.ROOT));
 
         for (PlayerListEntry entry : mc.getNetworkHandler().getPlayerList()) {
-            String name = entry.getProfile().getName();
+            String name = entry.getProfile().name();
             String key = name.toLowerCase(Locale.ROOT);
 
             if (name.equals(self)) continue;
